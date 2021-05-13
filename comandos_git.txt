@@ -22,3 +22,15 @@ git log
 #ver o que mudou 
 
 git difftool
+
+# adicionando branch
+
+git branch
+
+# mudando branch
+
+git checkout Nome_da_branch
+
+
+
+
