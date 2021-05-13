@@ -32,5 +32,7 @@ git branch
 git checkout Nome_da_branch
 
 
+# sicronizando versões branch
+
 
 
