@@ -1,0 +1,8 @@
+#intalação do cliente git
+- Linux debian: apt-get install git
+
+#inicializar repositorio git local
+git init
+
+#status do repositorio git
+git status
