@@ -14,3 +14,11 @@ git add nome_do_arquivo
 #commitar arquivos da area de stage
 
 git commit -m "Mensagem"
+
+#ver os logs
+
+git log
+
+#ver o que mudou 
+
+git difftool
