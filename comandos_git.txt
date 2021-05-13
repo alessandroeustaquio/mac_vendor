@@ -6,3 +6,11 @@ git init
 
 #status do repositorio git
 git status
+
+#adicionando arquivos na área de stage
+
+git add nome_do_arquivo
+
+#commitar arquivos da area de stage
+
+git commit -m "Mensagem"
