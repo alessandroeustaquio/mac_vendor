@@ -34,5 +34,4 @@ git checkout Nome_da_branch
 
 # sicronizando versões branch
 
-
-
+git reset --hard HEAD~1
