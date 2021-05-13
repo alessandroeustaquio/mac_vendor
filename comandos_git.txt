@@ -31,7 +31,14 @@ git branch
 
 git checkout Nome_da_branch
 
+# Sincronizando versõres branch
 
-# sicronizando versões branch
+git merge Nome_Branch
+
+# voltando versões branch
 
 git reset --hard HEAD~1
+
+# deletar um branch
+
+git branch -D Nome_do_brach
