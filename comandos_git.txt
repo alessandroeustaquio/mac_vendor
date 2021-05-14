@@ -42,3 +42,7 @@ git reset --hard HEAD~1
 # deletar um branch
 
 git branch -D Nome_do_brach
+
+#ignorar arquivos na sincronizaçao
+
+criar um arquivo chamado .gitignore e dentro do arquivo colocar o nome dos arquivos a serem ignorados
