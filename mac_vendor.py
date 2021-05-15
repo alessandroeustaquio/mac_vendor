@@ -22,7 +22,7 @@ def buscar_vendor(mac_address):
     url = f'{url}{mac_address}'
     #print (url)
     response = requests.get(url)
-    time.sleep(1)
+    time.sleep(.2)
     #print(type(response.text))
     if response.status_code==200:
         dic = json.loads(response.text)
