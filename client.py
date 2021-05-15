@@ -1,5 +1,6 @@
-from os import linesep
 import requests
+import json
+from threading import Event
 
 def ler_txt():
     macs = {}
@@ -14,6 +15,23 @@ def ler_txt():
                 ip=line_array[0]
                 mac=line_array[1]
                 macs[ip]=mac
-    print(line_array)
     return macs
-print(m)
+
+def buscar_vendor(mac_address):
+    url = 'https://api.macvendors.com/'
+    url = url+mac_address
+    print (url)
+    response = requests.get(url)
+    Event().wait(1)
+    print(type(response.text))
+    if response.status_code==200:
+        #dic = json.loads(response.text)
+        print (response.text)
+        #return dic
+    else:
+        print('Erro')
+
+macs_list=list(ler_txt().values())
+
+for i in macs_list:
+    dic = buscar_vendor(i)
