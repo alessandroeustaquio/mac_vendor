@@ -1,6 +1,6 @@
 import requests
 import json
-from threading import Event
+import time
 
 def ler_txt():
     macs = {}
@@ -18,16 +18,15 @@ def ler_txt():
     return macs
 
 def buscar_vendor(mac_address):
-    url = 'https://api.macvendors.com/'
-    url = url+mac_address
-    print (url)
+    url = 'https://api.maclookup.app/v2/macs/'
+    url = f'{url}{mac_address}'
+    #print (url)
     response = requests.get(url)
-    Event().wait(1)
-    print(type(response.text))
+    time.sleep(1)
+    #print(type(response.text))
     if response.status_code==200:
-        #dic = json.loads(response.text)
-        print (response.text)
-        #return dic
+        dic = json.loads(response.text)
+        return dic
     else:
         print('Erro')
 
@@ -35,3 +34,5 @@ macs_list=list(ler_txt().values())
 
 for i in macs_list:
     dic = buscar_vendor(i)
+    fabricante=dic.get('company')
+    print (f'O fabricante do MAC: {i} é: {fabricante}')
