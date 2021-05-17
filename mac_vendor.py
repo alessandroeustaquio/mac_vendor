@@ -36,3 +36,4 @@ for i in macs_list:
     dic = buscar_vendor(i)
     fabricante=dic.get('company')
     print (f'O fabricante do MAC: {i} é: {fabricante}')
+    
