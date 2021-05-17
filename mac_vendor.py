@@ -37,3 +37,5 @@ for i in macs_list:
     fabricante=dic.get('company')
     print (f'O fabricante do MAC: {i} é: {fabricante}')
     
+
+    
